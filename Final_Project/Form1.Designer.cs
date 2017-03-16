@@ -52,15 +52,31 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.TOA = new System.Windows.Forms.CheckedListBox();
-            this.NOD = new System.Windows.Forms.NumericUpDown();
-            this.NOC = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label15 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.B = new System.Windows.Forms.MaskedTextBox();
+            this.DC = new System.Windows.Forms.MaskedTextBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.NOC = new System.Windows.Forms.NumericUpDown();
+            this.NOD = new System.Windows.Forms.NumericUpDown();
+            this.TOA = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.EA)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NOD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NOC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NOD)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -144,7 +160,7 @@
             // 
             // PN
             // 
-            this.PN.Location = new System.Drawing.Point(168, 378);
+            this.PN.Location = new System.Drawing.Point(168, 382);
             this.PN.Name = "PN";
             this.PN.Size = new System.Drawing.Size(200, 20);
             this.PN.TabIndex = 11;
@@ -158,9 +174,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(4, 450);
+            this.button1.Location = new System.Drawing.Point(3, 461);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(407, 71);
+            this.button1.Size = new System.Drawing.Size(718, 71);
             this.button1.TabIndex = 1;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -269,6 +285,18 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.B);
+            this.panel1.Controls.Add(this.DC);
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.NOC);
@@ -300,8 +328,192 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(745, 521);
+            this.panel1.Size = new System.Drawing.Size(724, 532);
             this.panel1.TabIndex = 14;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(582, 132);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 39;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(442, 198);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(119, 23);
+            this.button6.TabIndex = 44;
+            this.button6.Text = "Add Pet";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(439, 132);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(78, 13);
+            this.label16.TabIndex = 42;
+            this.label16.Text = "Estimated Age:";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.Location = new System.Drawing.Point(439, 237);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(263, 86);
+            this.listView1.TabIndex = 41;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Pet Name";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Estimated Age";
+            this.columnHeader2.Width = 80;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Description of Breed";
+            this.columnHeader3.Width = 115;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(436, 162);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 13);
+            this.label15.TabIndex = 40;
+            this.label15.Text = "Description of Breed:";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(582, 159);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(120, 72);
+            this.richTextBox1.TabIndex = 40;
+            this.richTextBox1.Text = "";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(582, 104);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(439, 107);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 13);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Pet Name:";
+            // 
+            // B
+            // 
+            this.B.Location = new System.Drawing.Point(602, 378);
+            this.B.Mask = "$000.00";
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(100, 20);
+            this.B.TabIndex = 35;
+            this.B.Visible = false;
+            // 
+            // DC
+            // 
+            this.DC.Location = new System.Drawing.Point(439, 378);
+            this.DC.Mask = "$000.00";
+            this.DC.Name = "DC";
+            this.DC.Size = new System.Drawing.Size(100, 20);
+            this.DC.TabIndex = 34;
+            this.DC.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(627, 329);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 33;
+            this.button5.Text = "Boarding";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(439, 329);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 32;
+            this.button4.Text = "DayCare";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(436, 71);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 13);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Number of Cats:";
+            this.label13.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(436, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 13);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Number of Dogs:";
+            this.label12.Visible = false;
+            // 
+            // NOC
+            // 
+            this.NOC.Location = new System.Drawing.Point(582, 69);
+            this.NOC.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NOC.Name = "NOC";
+            this.NOC.Size = new System.Drawing.Size(120, 20);
+            this.NOC.TabIndex = 29;
+            this.NOC.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NOC.Visible = false;
+            this.NOC.ValueChanged += new System.EventHandler(this.NOC_ValueChanged);
+            // 
+            // NOD
+            // 
+            this.NOD.Location = new System.Drawing.Point(582, 38);
+            this.NOD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NOD.Name = "NOD";
+            this.NOD.Size = new System.Drawing.Size(120, 20);
+            this.NOD.TabIndex = 28;
+            this.NOD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NOD.Visible = false;
+            this.NOD.ValueChanged += new System.EventHandler(this.NOD_ValueChanged);
             // 
             // TOA
             // 
@@ -316,55 +528,20 @@
             this.TOA.TabIndex = 7;
             this.TOA.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // NOD
-            // 
-            this.NOD.Location = new System.Drawing.Point(582, 38);
-            this.NOD.Name = "NOD";
-            this.NOD.Size = new System.Drawing.Size(120, 20);
-            this.NOD.TabIndex = 28;
-            this.NOD.Visible = false;
-            // 
-            // NOC
-            // 
-            this.NOC.Location = new System.Drawing.Point(582, 64);
-            this.NOC.Name = "NOC";
-            this.NOC.Size = new System.Drawing.Size(120, 20);
-            this.NOC.TabIndex = 29;
-            this.NOC.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(492, 40);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 13);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Number of Dogs";
-            this.label12.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(492, 66);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 13);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Number of Cats";
-            this.label13.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 521);
+            this.ClientSize = new System.Drawing.Size(724, 532);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.EA)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NOD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NOC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NOD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,6 +577,21 @@
         private System.Windows.Forms.NumericUpDown NOD;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox B;
+        private System.Windows.Forms.MaskedTextBox DC;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
