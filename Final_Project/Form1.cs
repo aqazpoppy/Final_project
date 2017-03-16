@@ -12,6 +12,8 @@ namespace Final_Project
 {
     public partial class Form1 : Form
     {
+        public static int DCR = 25;
+        public static decimal BR = 30;
         public Form1()
         {
             InitializeComponent();
@@ -74,6 +76,46 @@ namespace Final_Project
                 NOC.Visible = false;
                 label13.Visible = false;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DC.Visible = true;
+            B.Visible = false;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            B.Visible = true;
+            DC.Visible = false;
+        }
+
+        private void NOD_ValueChanged(object sender, EventArgs e)
+        {
+            if (NOD.Visible == true)
+            {
+                DC.Text += (25 * NOD.Value);
+            }            
+        }
+
+        private void NOC_ValueChanged(object sender, EventArgs e)
+        {
+            if (NOC.Visible == true)
+            {
+                DC.Text += (25 * NOD.Value);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string[] row = { textBox1.Text, Convert.ToString(numericUpDown1.Value), richTextBox1.Text };
+            var listViewItem = new ListViewItem(row);
+            listView1.Items.Add(listViewItem);
+            textBox1.Clear();
+            numericUpDown1.ResetText();
+            richTextBox1.Clear();
+            DC.Text += DCR;
+            B.Text += BR;
         }
     }
 }
