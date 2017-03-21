@@ -50,12 +50,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.total = new System.Windows.Forms.MaskedTextBox();
             this.AddPetBtn = new System.Windows.Forms.Button();
             this.BreedDescriptInput = new System.Windows.Forms.RichTextBox();
             this.EstAgeInput = new System.Windows.Forms.NumericUpDown();
             this.PetNameInput = new System.Windows.Forms.TextBox();
-            this.Both = new System.Windows.Forms.MaskedTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,10 +62,11 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DayCare = new System.Windows.Forms.Button();
             this.Boarding = new System.Windows.Forms.Button();
-            this.DC = new System.Windows.Forms.MaskedTextBox();
-            this.B = new System.Windows.Forms.MaskedTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DC = new System.Windows.Forms.Label();
+            this.B = new System.Windows.Forms.Label();
+            this.Both = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -126,7 +126,7 @@
             this.PhoneN.Mask = "(999) 000-0000";
             this.PhoneN.Name = "PhoneN";
             this.PhoneN.Size = new System.Drawing.Size(100, 20);
-            this.PhoneN.TabIndex = 27;
+            this.PhoneN.TabIndex = 5;
             // 
             // TOR
             // 
@@ -138,22 +138,23 @@
             this.TOR.Location = new System.Drawing.Point(176, 162);
             this.TOR.Name = "TOR";
             this.TOR.Size = new System.Drawing.Size(200, 21);
-            this.TOR.TabIndex = 7;
+            this.TOR.TabIndex = 6;
             // 
             // DOR
             // 
             this.DOR.Location = new System.Drawing.Point(176, 189);
             this.DOR.Name = "DOR";
             this.DOR.Size = new System.Drawing.Size(200, 20);
-            this.DOR.TabIndex = 9;
+            this.DOR.TabIndex = 7;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(6, 499);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(370, 71);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -267,12 +268,14 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.maskedTextBox1);
+            this.tabPage1.Controls.Add(this.Both);
+            this.tabPage1.Controls.Add(this.B);
+            this.tabPage1.Controls.Add(this.DC);
+            this.tabPage1.Controls.Add(this.total);
             this.tabPage1.Controls.Add(this.AddPetBtn);
             this.tabPage1.Controls.Add(this.BreedDescriptInput);
             this.tabPage1.Controls.Add(this.EstAgeInput);
             this.tabPage1.Controls.Add(this.PetNameInput);
-            this.tabPage1.Controls.Add(this.Both);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.DOR);
@@ -286,9 +289,7 @@
             this.tabPage1.Controls.Add(this.Boarding);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.DC);
             this.tabPage1.Controls.Add(this.TOR);
-            this.tabPage1.Controls.Add(this.B);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.CLN);
             this.tabPage1.Controls.Add(this.A);
@@ -306,22 +307,22 @@
             this.tabPage1.Text = "Single Pet";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // total
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(161, 473);
-            this.maskedTextBox1.Mask = "000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.maskedTextBox1.TabIndex = 53;
-            this.maskedTextBox1.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
-            this.maskedTextBox1.Validating += new System.ComponentModel.CancelEventHandler(this.maskedTextBox1_Validating);
+            this.total.Location = new System.Drawing.Point(161, 473);
+            this.total.Mask = "$000";
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(100, 20);
+            this.total.TabIndex = 53;
+            this.total.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
+            this.total.Validating += new System.ComponentModel.CancelEventHandler(this.maskedTextBox1_Validating);
             // 
             // AddPetBtn
             // 
             this.AddPetBtn.Location = new System.Drawing.Point(36, 290);
             this.AddPetBtn.Name = "AddPetBtn";
             this.AddPetBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddPetBtn.TabIndex = 52;
+            this.AddPetBtn.TabIndex = 11;
             this.AddPetBtn.Text = "Add Pet";
             this.AddPetBtn.UseVisualStyleBackColor = true;
             this.AddPetBtn.Click += new System.EventHandler(this.AddPetBtn_Click);
@@ -332,7 +333,7 @@
             this.BreedDescriptInput.Location = new System.Drawing.Point(176, 270);
             this.BreedDescriptInput.Name = "BreedDescriptInput";
             this.BreedDescriptInput.Size = new System.Drawing.Size(199, 43);
-            this.BreedDescriptInput.TabIndex = 51;
+            this.BreedDescriptInput.TabIndex = 10;
             this.BreedDescriptInput.Text = "";
             // 
             // EstAgeInput
@@ -340,30 +341,21 @@
             this.EstAgeInput.Location = new System.Drawing.Point(177, 241);
             this.EstAgeInput.Name = "EstAgeInput";
             this.EstAgeInput.Size = new System.Drawing.Size(199, 20);
-            this.EstAgeInput.TabIndex = 50;
+            this.EstAgeInput.TabIndex = 9;
             // 
             // PetNameInput
             // 
             this.PetNameInput.Location = new System.Drawing.Point(176, 218);
             this.PetNameInput.Name = "PetNameInput";
             this.PetNameInput.Size = new System.Drawing.Size(200, 20);
-            this.PetNameInput.TabIndex = 49;
-            // 
-            // Both
-            // 
-            this.Both.Location = new System.Drawing.Point(161, 440);
-            this.Both.Mask = "$0000";
-            this.Both.Name = "Both";
-            this.Both.Size = new System.Drawing.Size(100, 20);
-            this.Both.TabIndex = 48;
-            this.Both.Visible = false;
+            this.PetNameInput.TabIndex = 8;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(172, 411);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 47;
+            this.button2.TabIndex = 13;
             this.button2.Text = "Both";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -402,7 +394,7 @@
             this.DayCare.Location = new System.Drawing.Point(37, 411);
             this.DayCare.Name = "DayCare";
             this.DayCare.Size = new System.Drawing.Size(75, 23);
-            this.DayCare.TabIndex = 32;
+            this.DayCare.TabIndex = 12;
             this.DayCare.Text = "DayCare";
             this.DayCare.UseVisualStyleBackColor = true;
             this.DayCare.Click += new System.EventHandler(this.button4_Click);
@@ -412,28 +404,10 @@
             this.Boarding.Location = new System.Drawing.Point(301, 411);
             this.Boarding.Name = "Boarding";
             this.Boarding.Size = new System.Drawing.Size(75, 23);
-            this.Boarding.TabIndex = 33;
+            this.Boarding.TabIndex = 14;
             this.Boarding.Text = "Boarding";
             this.Boarding.UseVisualStyleBackColor = true;
             this.Boarding.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // DC
-            // 
-            this.DC.Location = new System.Drawing.Point(36, 440);
-            this.DC.Mask = "$0000";
-            this.DC.Name = "DC";
-            this.DC.Size = new System.Drawing.Size(100, 20);
-            this.DC.TabIndex = 34;
-            this.DC.Visible = false;
-            // 
-            // B
-            // 
-            this.B.Location = new System.Drawing.Point(276, 440);
-            this.B.Mask = "$0000";
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(100, 20);
-            this.B.TabIndex = 35;
-            this.B.Visible = false;
             // 
             // tabPage2
             // 
@@ -454,6 +428,36 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(406, 570);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // DC
+            // 
+            this.DC.AutoSize = true;
+            this.DC.Location = new System.Drawing.Point(69, 447);
+            this.DC.Name = "DC";
+            this.DC.Size = new System.Drawing.Size(13, 13);
+            this.DC.TabIndex = 54;
+            this.DC.Text = "0";
+            this.DC.Visible = false;
+            // 
+            // B
+            // 
+            this.B.AutoSize = true;
+            this.B.Location = new System.Drawing.Point(333, 447);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(13, 13);
+            this.B.TabIndex = 55;
+            this.B.Text = "0";
+            this.B.Visible = false;
+            // 
+            // Both
+            // 
+            this.Both.AutoSize = true;
+            this.Both.Location = new System.Drawing.Point(204, 447);
+            this.Both.Name = "Both";
+            this.Both.Size = new System.Drawing.Size(13, 13);
+            this.Both.TabIndex = 56;
+            this.Both.Text = "0";
+            this.Both.Visible = false;
             // 
             // Form1
             // 
@@ -496,8 +500,6 @@
         private System.Windows.Forms.Button ExistingCustomer;
         private System.Windows.Forms.Button NewCustomer;
         private System.Windows.Forms.MaskedTextBox PhoneN;
-        private System.Windows.Forms.MaskedTextBox B;
-        private System.Windows.Forms.MaskedTextBox DC;
         private System.Windows.Forms.Button Boarding;
         private System.Windows.Forms.Button DayCare;
         private System.Windows.Forms.ListView listView1;
@@ -507,14 +509,16 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.MaskedTextBox Both;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button AddPetBtn;
         private System.Windows.Forms.RichTextBox BreedDescriptInput;
         private System.Windows.Forms.NumericUpDown EstAgeInput;
         private System.Windows.Forms.TextBox PetNameInput;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox total;
+        private System.Windows.Forms.Label Both;
+        private System.Windows.Forms.Label B;
+        private System.Windows.Forms.Label DC;
     }
 }
 
