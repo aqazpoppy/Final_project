@@ -16,6 +16,8 @@ namespace Final_Project
         public int DCT = 0;
         public static int BR = 30;
         public int BRT = 0;
+        public string gender;
+
         public Form1()
         {
             InitializeComponent();
@@ -27,8 +29,8 @@ namespace Final_Project
             label3.Text = "Customer First Name:";
             label9.Text = "Customer Last Name:";
             CLN.Enabled = true;
-            A.Enabled = true;
-            PhoneN.Enabled = true;
+            Address.Enabled = true;
+            PhoneNumber.Enabled = true;
 
             Validate();
             panel1.Update();
@@ -40,8 +42,8 @@ namespace Final_Project
             label3.Text = "Customer ID:";
             label9.Text = "Customer Name:";
             CLN.Enabled = false;
-            A.Enabled = false;
-            PhoneN.Enabled = false;
+            Address.Enabled = false;
+            PhoneNumber.Enabled = false;
 
             Validate();
             panel1.Update();
@@ -52,7 +54,7 @@ namespace Final_Project
             DC.Visible = true;
             B.Visible = false;
             Both.Visible = false;
-            total.Text = DC.Text;
+            Total.Text = DC.Text;
             Validate();
         }
 
@@ -61,7 +63,7 @@ namespace Final_Project
             B.Visible = true;
             DC.Visible = false;
             Both.Visible = false;
-            total.Text = B.Text;
+            Total.Text = B.Text;
 
             Validate();
         }
@@ -71,13 +73,13 @@ namespace Final_Project
             B.Visible = true;
             DC.Visible = true;
             Both.Visible = true;
-            total.Text = Both.Text;
+            Total.Text = Both.Text;
             Validate();
         }
 
         private void AddPetBtn_Click(object sender, EventArgs e)
         {
-            string[] row = {PetNameInput.Text, Convert.ToString(EstAgeInput.Value), BreedDescriptInput.Text };
+            string[] row = {PetNameInput.Text, Convert.ToString(EstAgeInput.Value), BreedDescriptInput.Text, gender };
             var listViewItem = new ListViewItem(row);
             listView1.Items.Add(listViewItem);
             PetNameInput.Clear();
@@ -92,17 +94,17 @@ namespace Final_Project
 
             if ((DC.Visible.Equals(true)) && (B.Visible.Equals(false)))
             {
-                total.Text = DC.Text;
+                Total.Text = DC.Text;
                 Validate();
             }
             if ((B.Visible.Equals(true)) && (DC.Visible.Equals(true)))
             {
-                total.Text = B.Text;
+                Total.Text = B.Text;
                 Validate();
             }
             if (Both.Visible.Equals(true))
             {
-                total.Text = Both.Text;
+                Total.Text = Both.Text;
                 Validate();
             }
         }
@@ -119,11 +121,21 @@ namespace Final_Project
 
         private void maskedTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (total.Text.Length.Equals(3))
+            if (Total.Text.Length.Equals(3))
             {
                 label3.Text = "worked";
             }
             Validate();
+        }
+
+        private void Male_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Male";
+        }
+
+        private void Female_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "Female";
         }
     }
 }

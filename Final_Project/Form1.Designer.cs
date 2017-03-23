@@ -32,10 +32,10 @@
             this.ExistingCustomer = new System.Windows.Forms.Button();
             this.CN = new System.Windows.Forms.TextBox();
             this.CLN = new System.Windows.Forms.TextBox();
-            this.A = new System.Windows.Forms.TextBox();
-            this.PhoneN = new System.Windows.Forms.MaskedTextBox();
-            this.TOR = new System.Windows.Forms.ComboBox();
-            this.DOR = new System.Windows.Forms.DateTimePicker();
+            this.Address = new System.Windows.Forms.TextBox();
+            this.PhoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.TypeOfReservation = new System.Windows.Forms.ComboBox();
+            this.DateOfReservation = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,23 +50,27 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.total = new System.Windows.Forms.MaskedTextBox();
+            this.Both = new System.Windows.Forms.Label();
+            this.B = new System.Windows.Forms.Label();
+            this.DC = new System.Windows.Forms.Label();
+            this.Total = new System.Windows.Forms.MaskedTextBox();
             this.AddPetBtn = new System.Windows.Forms.Button();
             this.BreedDescriptInput = new System.Windows.Forms.RichTextBox();
             this.EstAgeInput = new System.Windows.Forms.NumericUpDown();
             this.PetNameInput = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Pet_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Estimated_Age = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Description_of_breed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DayCare = new System.Windows.Forms.Button();
             this.Boarding = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DC = new System.Windows.Forms.Label();
-            this.B = new System.Windows.Forms.Label();
-            this.Both = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Male = new System.Windows.Forms.RadioButton();
+            this.Female = new System.Windows.Forms.RadioButton();
+            this.Gender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -111,41 +115,41 @@
             this.CLN.Size = new System.Drawing.Size(200, 20);
             this.CLN.TabIndex = 3;
             // 
-            // A
+            // Address
             // 
-            this.A.Enabled = false;
-            this.A.Location = new System.Drawing.Point(176, 110);
-            this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(200, 20);
-            this.A.TabIndex = 4;
+            this.Address.Enabled = false;
+            this.Address.Location = new System.Drawing.Point(176, 110);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(200, 20);
+            this.Address.TabIndex = 4;
             // 
-            // PhoneN
+            // PhoneNumber
             // 
-            this.PhoneN.Enabled = false;
-            this.PhoneN.Location = new System.Drawing.Point(177, 136);
-            this.PhoneN.Mask = "(999) 000-0000";
-            this.PhoneN.Name = "PhoneN";
-            this.PhoneN.Size = new System.Drawing.Size(100, 20);
-            this.PhoneN.TabIndex = 5;
+            this.PhoneNumber.Enabled = false;
+            this.PhoneNumber.Location = new System.Drawing.Point(177, 136);
+            this.PhoneNumber.Mask = "(999) 000-0000";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.PhoneNumber.TabIndex = 5;
             // 
-            // TOR
+            // TypeOfReservation
             // 
-            this.TOR.FormattingEnabled = true;
-            this.TOR.Items.AddRange(new object[] {
+            this.TypeOfReservation.FormattingEnabled = true;
+            this.TypeOfReservation.Items.AddRange(new object[] {
             "Email",
             "Phone",
             "Walk-In"});
-            this.TOR.Location = new System.Drawing.Point(176, 162);
-            this.TOR.Name = "TOR";
-            this.TOR.Size = new System.Drawing.Size(200, 21);
-            this.TOR.TabIndex = 6;
+            this.TypeOfReservation.Location = new System.Drawing.Point(176, 162);
+            this.TypeOfReservation.Name = "TypeOfReservation";
+            this.TypeOfReservation.Size = new System.Drawing.Size(200, 21);
+            this.TypeOfReservation.TabIndex = 6;
             // 
-            // DOR
+            // DateOfReservation
             // 
-            this.DOR.Location = new System.Drawing.Point(176, 189);
-            this.DOR.Name = "DOR";
-            this.DOR.Size = new System.Drawing.Size(200, 20);
-            this.DOR.TabIndex = 7;
+            this.DateOfReservation.Location = new System.Drawing.Point(176, 189);
+            this.DateOfReservation.Name = "DateOfReservation";
+            this.DateOfReservation.Size = new System.Drawing.Size(200, 20);
+            this.DateOfReservation.TabIndex = 7;
             // 
             // button1
             // 
@@ -153,7 +157,7 @@
             this.button1.Location = new System.Drawing.Point(6, 499);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(370, 71);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 17;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -268,17 +272,20 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Female);
+            this.tabPage1.Controls.Add(this.Male);
+            this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.Both);
             this.tabPage1.Controls.Add(this.B);
             this.tabPage1.Controls.Add(this.DC);
-            this.tabPage1.Controls.Add(this.total);
+            this.tabPage1.Controls.Add(this.Total);
             this.tabPage1.Controls.Add(this.AddPetBtn);
             this.tabPage1.Controls.Add(this.BreedDescriptInput);
             this.tabPage1.Controls.Add(this.EstAgeInput);
             this.tabPage1.Controls.Add(this.PetNameInput);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.DOR);
+            this.tabPage1.Controls.Add(this.DateOfReservation);
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label5);
@@ -289,11 +296,11 @@
             this.tabPage1.Controls.Add(this.Boarding);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.TOR);
+            this.tabPage1.Controls.Add(this.TypeOfReservation);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.CLN);
-            this.tabPage1.Controls.Add(this.A);
-            this.tabPage1.Controls.Add(this.PhoneN);
+            this.tabPage1.Controls.Add(this.Address);
+            this.tabPage1.Controls.Add(this.PhoneNumber);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.ExistingCustomer);
@@ -307,22 +314,52 @@
             this.tabPage1.Text = "Single Pet";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // total
+            // Both
             // 
-            this.total.Location = new System.Drawing.Point(161, 473);
-            this.total.Mask = "$000";
-            this.total.Name = "total";
-            this.total.Size = new System.Drawing.Size(100, 20);
-            this.total.TabIndex = 53;
-            this.total.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
-            this.total.Validating += new System.ComponentModel.CancelEventHandler(this.maskedTextBox1_Validating);
+            this.Both.AutoSize = true;
+            this.Both.Location = new System.Drawing.Point(204, 456);
+            this.Both.Name = "Both";
+            this.Both.Size = new System.Drawing.Size(13, 13);
+            this.Both.TabIndex = 56;
+            this.Both.Text = "0";
+            this.Both.Visible = false;
+            // 
+            // B
+            // 
+            this.B.AutoSize = true;
+            this.B.Location = new System.Drawing.Point(332, 456);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(13, 13);
+            this.B.TabIndex = 55;
+            this.B.Text = "0";
+            this.B.Visible = false;
+            // 
+            // DC
+            // 
+            this.DC.AutoSize = true;
+            this.DC.Location = new System.Drawing.Point(69, 456);
+            this.DC.Name = "DC";
+            this.DC.Size = new System.Drawing.Size(13, 13);
+            this.DC.TabIndex = 54;
+            this.DC.Text = "0";
+            this.DC.Visible = false;
+            // 
+            // Total
+            // 
+            this.Total.Location = new System.Drawing.Point(161, 473);
+            this.Total.Mask = "$000";
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(100, 20);
+            this.Total.TabIndex = 53;
+            this.Total.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
+            this.Total.Validating += new System.ComponentModel.CancelEventHandler(this.maskedTextBox1_Validating);
             // 
             // AddPetBtn
             // 
-            this.AddPetBtn.Location = new System.Drawing.Point(36, 290);
+            this.AddPetBtn.Location = new System.Drawing.Point(36, 309);
             this.AddPetBtn.Name = "AddPetBtn";
             this.AddPetBtn.Size = new System.Drawing.Size(75, 23);
-            this.AddPetBtn.TabIndex = 11;
+            this.AddPetBtn.TabIndex = 13;
             this.AddPetBtn.Text = "Add Pet";
             this.AddPetBtn.UseVisualStyleBackColor = true;
             this.AddPetBtn.Click += new System.EventHandler(this.AddPetBtn_Click);
@@ -352,10 +389,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(172, 411);
+            this.button2.Location = new System.Drawing.Point(176, 430);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
+            this.button2.TabIndex = 15;
             this.button2.Text = "Both";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
@@ -363,48 +400,49 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
+            this.Pet_Name,
+            this.Estimated_Age,
+            this.Description_of_breed,
+            this.Gender});
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.Location = new System.Drawing.Point(39, 319);
+            this.listView1.Location = new System.Drawing.Point(39, 338);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(337, 86);
             this.listView1.TabIndex = 41;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // Pet_Name
             // 
-            this.columnHeader1.Text = "Pet Name";
+            this.Pet_Name.Text = "Pet Name";
             // 
-            // columnHeader2
+            // Estimated_Age
             // 
-            this.columnHeader2.Text = "Estimated Age";
-            this.columnHeader2.Width = 80;
+            this.Estimated_Age.Text = "Estimated Age";
+            this.Estimated_Age.Width = 80;
             // 
-            // columnHeader3
+            // Description_of_breed
             // 
-            this.columnHeader3.Text = "Description of Breed";
-            this.columnHeader3.Width = 115;
+            this.Description_of_breed.Text = "Description of Breed";
+            this.Description_of_breed.Width = 115;
             // 
             // DayCare
             // 
-            this.DayCare.Location = new System.Drawing.Point(37, 411);
+            this.DayCare.Location = new System.Drawing.Point(37, 430);
             this.DayCare.Name = "DayCare";
             this.DayCare.Size = new System.Drawing.Size(75, 23);
-            this.DayCare.TabIndex = 12;
+            this.DayCare.TabIndex = 14;
             this.DayCare.Text = "DayCare";
             this.DayCare.UseVisualStyleBackColor = true;
             this.DayCare.Click += new System.EventHandler(this.button4_Click);
             // 
             // Boarding
             // 
-            this.Boarding.Location = new System.Drawing.Point(301, 411);
+            this.Boarding.Location = new System.Drawing.Point(300, 430);
             this.Boarding.Name = "Boarding";
             this.Boarding.Size = new System.Drawing.Size(75, 23);
-            this.Boarding.TabIndex = 14;
+            this.Boarding.TabIndex = 16;
             this.Boarding.Text = "Boarding";
             this.Boarding.UseVisualStyleBackColor = true;
             this.Boarding.Click += new System.EventHandler(this.button5_Click);
@@ -429,35 +467,42 @@
             this.dataGridView1.Size = new System.Drawing.Size(406, 570);
             this.dataGridView1.TabIndex = 0;
             // 
-            // DC
+            // label2
             // 
-            this.DC.AutoSize = true;
-            this.DC.Location = new System.Drawing.Point(69, 447);
-            this.DC.Name = "DC";
-            this.DC.Size = new System.Drawing.Size(13, 13);
-            this.DC.TabIndex = 54;
-            this.DC.Text = "0";
-            this.DC.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(118, 318);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Gender:";
             // 
-            // B
+            // Male
             // 
-            this.B.AutoSize = true;
-            this.B.Location = new System.Drawing.Point(333, 447);
-            this.B.Name = "B";
-            this.B.Size = new System.Drawing.Size(13, 13);
-            this.B.TabIndex = 55;
-            this.B.Text = "0";
-            this.B.Visible = false;
+            this.Male.AutoSize = true;
+            this.Male.Location = new System.Drawing.Point(177, 316);
+            this.Male.Name = "Male";
+            this.Male.Size = new System.Drawing.Size(48, 17);
+            this.Male.TabIndex = 11;
+            this.Male.TabStop = true;
+            this.Male.Text = "Male";
+            this.Male.UseVisualStyleBackColor = true;
+            this.Male.CheckedChanged += new System.EventHandler(this.Male_CheckedChanged);
             // 
-            // Both
+            // Female
             // 
-            this.Both.AutoSize = true;
-            this.Both.Location = new System.Drawing.Point(204, 447);
-            this.Both.Name = "Both";
-            this.Both.Size = new System.Drawing.Size(13, 13);
-            this.Both.TabIndex = 56;
-            this.Both.Text = "0";
-            this.Both.Visible = false;
+            this.Female.AutoSize = true;
+            this.Female.Location = new System.Drawing.Point(231, 316);
+            this.Female.Name = "Female";
+            this.Female.Size = new System.Drawing.Size(59, 17);
+            this.Female.TabIndex = 12;
+            this.Female.TabStop = true;
+            this.Female.Text = "Female";
+            this.Female.UseVisualStyleBackColor = true;
+            this.Female.CheckedChanged += new System.EventHandler(this.Female_CheckedChanged);
+            // 
+            // Gender
+            // 
+            this.Gender.Text = "Gender";
             // 
             // Form1
             // 
@@ -480,12 +525,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox TOR;
+        private System.Windows.Forms.ComboBox TypeOfReservation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CN;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker DOR;
+        private System.Windows.Forms.DateTimePicker DateOfReservation;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -495,17 +540,17 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox A;
+        private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.TextBox CLN;
         private System.Windows.Forms.Button ExistingCustomer;
         private System.Windows.Forms.Button NewCustomer;
-        private System.Windows.Forms.MaskedTextBox PhoneN;
+        private System.Windows.Forms.MaskedTextBox PhoneNumber;
         private System.Windows.Forms.Button Boarding;
         private System.Windows.Forms.Button DayCare;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader Pet_Name;
+        private System.Windows.Forms.ColumnHeader Estimated_Age;
+        private System.Windows.Forms.ColumnHeader Description_of_breed;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button2;
@@ -515,10 +560,14 @@
         private System.Windows.Forms.RichTextBox BreedDescriptInput;
         private System.Windows.Forms.NumericUpDown EstAgeInput;
         private System.Windows.Forms.TextBox PetNameInput;
-        private System.Windows.Forms.MaskedTextBox total;
+        private System.Windows.Forms.MaskedTextBox Total;
         private System.Windows.Forms.Label Both;
         private System.Windows.Forms.Label B;
         private System.Windows.Forms.Label DC;
+        private System.Windows.Forms.RadioButton Female;
+        private System.Windows.Forms.RadioButton Male;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ColumnHeader Gender;
     }
 }
 
