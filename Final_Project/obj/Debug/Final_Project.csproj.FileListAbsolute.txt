@@ -27,3 +27,6 @@ C:\Users\tburto21\Documents\GitHub\Final_project\Final_Project\obj\Debug\Final_P
 C:\Users\tburto21\Documents\GitHub\Final_project\Final_Project\bin\Debug\Final_Project.exe
 C:\Users\tburto21\Documents\GitHub\Final_project\Final_Project\bin\Debug\Final_Project.pdb
 C:\Users\tburto21\Documents\GitHub\Final_project\Final_Project\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\techd\Source\Repos\Final_project\Final_Project\bin\Debug\Final_Project.exe.config
+C:\Users\techd\Source\Repos\Final_project\Final_Project\obj\Debug\Final_Project.exe
+C:\Users\techd\Source\Repos\Final_project\Final_Project\obj\Debug\Final_Project.pdb
